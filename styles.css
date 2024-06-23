@@ -64,4 +64,83 @@ body {
 }
 /* End of Nav Items */
 /* End of Navigation */
+
+/* Header */
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Banner */
+.banner {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner img {
+    border-radius: 50%;
+    width: 35rem; 
+    height: 35rem;
+    display: block;
+    margin: auto;
+}
+
+.banner h1 {
+    font-size: 7rem;
+    color: black;
+    text-align: center;
+}
+
+.banner a {
+    color: black;
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.banner a:hover {
+    color: gray;
+}
+
+/* Contact Info */
+.contact-info a {
+    display: block;
+}
+
+.contact-info p {
+    display: inline;
+    text-decoration: underline;
+}
+
+/*Email Button*/
+.contact-info .email:hover i {
+    display: none;
+}
+
+.contact-info .email:hover::before {
+    content: "\f2b6";
+    font-family: 'Font Awesome 5 Free';
+}
+/*End of Email Button*/
+
+/* Phone Button */
+.contact-info .phone:hover i {
+    transform: rotate(30deg);
+}
+/* End of Phone Button */
+/* End of Contact Info */
+
+/* Social Links */
+.social-links {
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 3rem;
+}
+/* End of Social Links */
+/*End of Banner */
+/* End of Header */
 /* End of Container */
