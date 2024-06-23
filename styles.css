@@ -1,0 +1,26 @@
+/* Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #C5C6C7;
+}
+/* End of Default Styles */
+
+/* Container */
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #C5C6C7;
+}
+/* End of Container */
