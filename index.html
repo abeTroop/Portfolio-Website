@@ -6,6 +6,9 @@
 
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/2938e4141d.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,23 +44,17 @@
 
             <!-- Header -->
             <header>
+                <!-- Backgrounds -->
+                <div class="backgrounds">
+                    <div class="bg-main"></div>
+                </div>
+                <!-- End of Backgrounds -->
+
                 <!-- Banner -->
                 <div class="banner">
+                    <div class="banner-background"></div>
                     <img src="images/AbrahamTroop.jpg" alt="Abraham Troop"> 
                     <h1>Abraham Troop</h1>
-
-                    <!-- Contact Info -->
-                    <div class="contact-info">
-                        <a href="mailto:abraham.troop@gmail.com" class="contact-item email">
-                            <i class='fas fa-envelope'></i>
-                            <p>abraham.troop@gmail.com</p>
-                        </a>
-                        <a href="tel:224-432-7983" class="contact-item phone">
-                            <i class='fas fa-phone'></i>
-                            <p>224-432-7983</p>
-                        </a>
-                    </div>
-                    <!-- End of Contact Info -->
 
                     <!-- Social Links -->
                     <div class="social-links">
@@ -66,6 +63,10 @@
                         </a>
                         <a href="https://github.com/abeTroop" target="_blank" class="social-item github">
                             <i class='fab fa-github'></i>
+                        </a>
+                        <a href="mailto:abraham.troop@gmail.com" class="social-item email">
+                            <i class='fas fa-envelope'></i>
+                            <i class='fas fa-envelope-open'></i>
                         </a>
                     </div>
                     <!-- End of Social Links -->
@@ -76,14 +77,14 @@
 
             <!-- Experience -->
             <section id="experience">
-                <i class='fas fa-briefcase'></i>
-                <h2>Experience</h2>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-underline"></div>
                 <div class="timeline">
                     <!-- AGCO -->
                     <div class="timeline-left job">
                         <div class="agco-info timeline-content">
-                            <h3 class="role">IT Intern</h3>
-                            <h4 class="company">AGCO Corporation</h4>
+                            <h4 class="role">IT Intern</h4>
+                            <h5 class="company">AGCO Corporation</h5>
                             <p class="description">
                                 Developed multiple new pages and widgets in QML utilizing QtCreator, VirtualBox, and Linux to 
                                 improve how variable rate control (VRC) maps are displayed in embedded software. Presented the final 
@@ -96,16 +97,16 @@
                         </div>
                     </div>
                     <div class="timeline-middle"></div>
-                    <p class="timeline-date timeline-date-right">May 2024 - Present</p>
+                    <h3 class="timeline-date timeline-date-right">May 2024 - Present</h3>
                     <!-- End of AGCO -->
                     
                     <!-- Arion -->
-                    <p class="timeline-date timeline-date-left">May 2022 - Present</p>
+                    <h3 class="timeline-date timeline-date-left">May 2022 - Present</h3>
                     <div class="timeline-middle"></div>
                     <div class="timeline-right job">
                         <div class="arion-info timeline-content">
-                            <h3 class="role">Care Provider</h3>
-                            <h4 class="company">Arion Care</h4>
+                            <h4 class="role">Care Provider</h4>
+                            <h5 class="company">Arion Care</h5>
                             <p class="description">
                                 Worked with a member to ensure they reached their habilitation goals and supplemented their therapy.
                             </p>
@@ -116,8 +117,8 @@
                     <!-- Chili's -->
                     <div class="timeline-left job">
                         <div class="chilis-info timeline-content">
-                            <h3 class="role">Food Runner</h3>
-                            <h4 class="company">Chili's</h4>
+                            <h4 class="role">Food Runner</h4>
+                            <h5 class="company">Chili's</h5>
                             <p class="description">
                                 Developed skills in customer service and communication by ensuring customers have a comfortable 
                                 dining experience and communicating effectively with managers and coworkers. Trained multiple new 
@@ -126,7 +127,7 @@
                         </div>
                     </div>
                     <div class="timeline-middle"></div>
-                    <p class="timeline-date timeline-date-right">June 2022 - April 2024</p>
+                    <h3 class="timeline-date timeline-date-right">June 2022 - April 2024</h3>
                     <!-- End of Chili's -->
                 </div>
             </section>

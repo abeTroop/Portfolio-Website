@@ -5,7 +5,11 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+    font-family: "Roboto", Verdana, sans-serif;
+}
+
+p {
+    font-family: "Nunito", Verdana, sans-serif;
 }
 
 html {
@@ -14,11 +18,20 @@ html {
 }
 
 body {
-    background-color: #C5C6C7;
+    background-color: var(--background-color);
 }
 
 :root {
+    /* Timeline */
     --timeline-spacing: 6rem;
+
+    /* Colors */
+    --font-color-light: #d1d5db;
+    --font-color-dark: #94a3b8;
+    --background-color: #0f172a;
+    --secondary-background-color: #121e30;
+    --accent-color: #67e8f9;
+    --secondary-accent-color: #99f6e4;
 }
 /* End of Default Styles */
 
@@ -26,7 +39,8 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    background-color: #C5C6C7;
+    background-color: var(--background-color);
+    overflow: hidden;
 }
 
 /* Navigation */
@@ -36,18 +50,18 @@ body {
     left: 0;
     width: 100%;
     height: 12rem;
-    background-color: gray;
     padding: 0 15rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 10;
+    
 }
 
 /* Logo */
 /* TODO: MAKE LOGO */
 .logo {
-    color: white;
+    color: var(--background-color);
     font-size: 5rem;
 }
 /* End of Logo */
@@ -65,7 +79,7 @@ body {
 
 .nav-link {
     font-size: 2rem;
-    color: white;
+    color: var(--background-color);
 }
 /* End of Nav Items */
 /* End of Navigation */
@@ -77,12 +91,44 @@ header {
     position: relative;
 }
 
+/* Backgrounds */
+.backgrounds div {
+    position: absolute;
+}
+
+.bg-main {
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(to left, transparent, var(--accent-color), var(--secondary-accent-color));
+    top: -90%;
+    transform: rotateZ(-15deg) skewX(30deg);
+    border-radius: 50%;
+    box-shadow: 0 2rem 6rem rgba(130, 162, 235, 0.3);
+}
+/* End of Backgrounds */
+
 /* Banner */
 .banner {
     position: absolute;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 3rem;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(0.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
+    border-radius: 1rem;
+    border: 0.063rem solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
+    z-index: -1;
 }
 
 .banner img {
@@ -95,47 +141,20 @@ header {
 
 .banner h1 {
     font-size: 7rem;
-    color: black;
+    color: var(--font-color-dark);
     text-align: center;
+    letter-spacing: 0.1rem;
 }
 
 .banner a {
-    color: black;
     font-size: 2rem;
+    color: var(--font-color-dark);
     background-color: transparent;
 }
 
 .banner a:hover {
-    color: gray;
+    color: var(--font-color-light);
 }
-
-/* Contact Info */
-.contact-info a {
-    display: block;
-}
-
-.contact-info p {
-    display: inline;
-    text-decoration: underline;
-}
-
-/*Email Button*/
-.contact-info .email:hover i {
-    display: none;
-}
-
-.contact-info .email:hover::before {
-    content: "\f2b6";
-    font-family: 'Font Awesome 5 Free';
-}
-/*End of Email Button*/
-
-/* Phone Button */
-.contact-info .phone:hover i {
-    transform: rotate(30deg);
-}
-/* End of Phone Button */
-/* End of Contact Info */
 
 /* Social Links */
 .social-links {
@@ -145,28 +164,43 @@ header {
 .social-links a {
     font-size: 3rem;
 }
+
+/*Email Button*/
+.email:hover .fa-envelope,
+.email .fa-envelope-open {
+    display: none;
+}
+
+.email:hover .fa-envelope-open {
+    display: inline;
+}
+/*End of Email Button*/
 /* End of Social Links */
 /*End of Banner */
 /* End of Header */
 
+.section-title {
+    font-size: 3rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.section-underline {
+    width: 6rem;
+    height: 0.5rem;
+    background-color: var(--accent-color);
+    margin: 1.5rem auto 3rem;
+    border-radius: 1rem;
+}
+
 /* Experience */
 #experience, #projects {
-    scroll-margin-top: 14rem;
+    scroll-margin-top: 16rem;
 }
 
 #experience {
     width: 100%;
-    height: 120vh;
-    margin-top: 2rem;
-}
-
-#experience h2, #experience i {
-    display: inline;
-    font-size: 3rem;
-}
-
-#experience i {
-    margin-left: 2.5rem;
+    height: auto;
 }
 
 /* Timeline */
@@ -182,7 +216,8 @@ header {
     content: '';
     position: absolute;
     width: 1rem;
-    background-color: white;
+    background-color: var(--secondary-background-color);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
     border-radius: 1rem;
     top: 0;
     bottom: 0;
@@ -199,8 +234,8 @@ header {
     height: 2.5rem;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border: 0.5rem solid #0396FF;
+    background-color: var(--secondary-background-color);
+    border: 0.5rem solid var(--accent-color);
     border-radius: 50%;
     transition: width 0.3s, height 0.3s;
 }
@@ -222,6 +257,7 @@ header {
 .timeline-date {
     align-self: center;
     font-size: 2rem;
+    color: var(--font-color-light);
 }
 
 .timeline-date-left {
@@ -236,8 +272,8 @@ header {
 .job {
     width: 70%;
     height: auto;
-    background-color: white;
-    box-shadow: 0 2rem 6rem rgba(130, 162, 235, 0.3); /* TODO: Adjust shadows */
+    background-color: var(--secondary-background-color);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
     padding: 3rem;
     border-radius: 1rem;
     margin: 1rem 0;
@@ -262,7 +298,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     border-top: 2rem solid transparent;
-    border-left: 2rem solid white;
+    border-left: 2rem solid var(--secondary-background-color);
     border-right: 2rem solid transparent;
     border-bottom: 2rem solid transparent;
 }
@@ -275,7 +311,7 @@ header {
     transform: translate(-100%, -50%);
     border-top: 2rem solid transparent;
     border-left: 2rem solid transparent;
-    border-right: 2rem solid white;
+    border-right: 2rem solid var(--secondary-background-color);
     border-bottom: 2rem solid transparent;
 }
 /* End of Timeline Triangles */
@@ -283,15 +319,18 @@ header {
 .role {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--font-color-dark);
 }
 
 .company {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--font-color-dark);
 }
 
 .description {
     font-size: 1.5rem;
+    color: var(--font-color-light);
 }
 
 .technical-skills {
@@ -303,12 +342,12 @@ header {
 
 .skill {
     list-style: none;
-    background: linear-gradient( 135deg, #ABDCFF 0%, #0396FF 100%);
-    box-shadow: 0 1rem 3rem rgba(30,161,255,0.5);
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent-color));
+    box-shadow: 0 0 2rem rgba(130, 162, 235, 0.3);
     border-radius: 2rem;
     padding: 1rem;
     font-size: 1.5rem;
-    color: white;
+    color: var(--background-color);
 }
 
 @media screen and (max-width: 640px) {
@@ -342,7 +381,7 @@ header {
         transform: translate(-100%, -50%);
         border-top: 2rem solid transparent;
         border-left: 2rem solid transparent;
-        border-right: 2rem solid white;
+        border-right: 2rem solid var(--secondary-background-color);
         border-bottom: 2rem solid transparent;  
     }
     /* End of Timeline Triangles */
@@ -352,8 +391,9 @@ header {
     }
 
     /* Update Dates */
-    .timeline-content {
-        font-size: 2.5rem;
+    .timeline-content::before {
+        font-size: 2rem;
+        color: var(--font-color-light);
     }
     
     .agco-info::before {
