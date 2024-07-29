@@ -55,7 +55,13 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    
+    transition: all 0.3s;
+}
+
+.navbar.sticky {
+    height: 8rem;
+    background-color: var(--secondary-background-color);
+    box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.6); /* TODO */
 }
 
 /* Logo */
@@ -63,6 +69,10 @@ body {
 .logo {
     color: var(--background-color);
     font-size: 5rem;
+}
+
+.sticky .logo {
+    color: var(--accent-color);
 }
 /* End of Logo */
 
@@ -80,6 +90,10 @@ body {
 .nav-link {
     font-size: 2rem;
     color: var(--background-color);
+}
+
+.sticky .nav-link {
+    color: var(--accent-color);
 }
 /* End of Nav Items */
 /* End of Navigation */
@@ -195,7 +209,7 @@ header {
 
 /* Experience */
 #experience, #projects {
-    scroll-margin-top: 16rem;
+    scroll-margin-top: 12rem;
 }
 
 #experience {
