@@ -377,7 +377,175 @@ header {
     border-bottom: 2rem solid transparent;
 }
 /* End of Timeline Triangles */
+/* End of Timeline */
+/* End of Experience */
 
+/* Projects */
+#projects {
+    width: 100%;
+    height: auto;
+    margin-top: 10rem;
+}
+
+.project {
+    width: 70%;
+    height: auto;
+    background-color: var(--secondary-background-color);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
+    padding: 3rem;
+    border-radius: 1rem;
+    margin: 0 auto 5rem;
+    display: flex;
+}
+
+.project-content {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-spacer {
+    flex-grow: 1;
+}
+
+.project-container img {
+    width: 52rem; 
+    height: auto;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.code-link {
+    font-size: 2rem;
+    color: var(--font-color-dark);
+    align-self: flex-end;
+    margin-top: 2rem;
+}
+
+.code-link i {
+    transition: transform 0.3s;
+    margin-left: 0.25rem;
+}
+
+.code-link:hover {
+    color: var(--font-color-light);
+}
+
+.code-link:hover i {
+    transform: translateX(1rem);
+}
+
+.project-container p {
+    display: inline;
+}
+/* End of Projects */
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--secondary-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.footer-social-media h3 {
+    font-size: 2rem;
+    color: var(--font-color-dark);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+/* End of Footer */
+/* End of Container */
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 60%;
+    }
+
+    .navbar {
+        padding: 0 10rem;
+    }
+
+    .nav-items {
+        width: 55%;
+    }
+
+    .project-container img {
+        width: 48rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 58%;
+    }
+
+    .nav-items {
+        width: 60%;
+    }
+    
+    .project-container img {
+        width: 44rem;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    html {
+        font-size: 56%;
+    }
+
+    .project-container img {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 0 5rem;
+    }
+
+    .nav-items {
+        width: 65%;
+    }
+
+    .bg-main {
+        top: -80%;
+    }
+
+    .project-container img {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .bg-main {
+        top: -70%;
+    }
+    
+    .project-content {
+        margin-left: 0;
+    }
+    
+    .project-container img {
+        display: none;
+    }
+
+    footer {
+        height: 15vh;
+    }
+}
+
+/* Responsive Timeline */
 @media screen and (max-width: 640px) {
     .timeline {
         display: block;
@@ -437,80 +605,15 @@ header {
     }
     /* End of Update Dates */
 }
-/* End of Timeline */
-/* End of Experience */
+/* End of Responsive Timeline */
 
-/* Projects */
-#projects {
-    width: 100%;
-    height: auto;
-    margin-top: 10rem;
-}
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 45%;
+    }
 
-.project {
-    position: relative;
-    width: 70%;
-    height: auto;
-    background-color: var(--secondary-background-color);
-    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
-    padding: 3rem;
-    border-radius: 1rem;
-    margin: 0 auto 5rem;
-    display: flex;
+    .bg-main {
+        top: -65%;
+    }
 }
-
-.project-content {
-    margin-left: 3rem;
-}
-
-.project-container img {
-    width: 48rem; 
-    height: auto;
-    border-radius: 1rem;
-}
-
-.code-link {
-    position: absolute;
-    font-size: 2rem;
-    color: var(--font-color-dark);
-    right: 4rem;
-    bottom: 3rem;
-}
-
-.code-link i {
-    transition: transform 0.3s;
-    margin-left: 0.25rem;
-}
-
-.code-link:hover {
-    color: var(--font-color-light);
-}
-
-.code-link:hover i {
-    transform: translateX(1rem);
-}
-
-.project-container p {
-    display: inline;
-}
-/* End of Projects */
-
-/* Footer */
-footer {
-    width: 100%;
-    height: 20vh;
-    background-color: var(--secondary-background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
-}
-
-.footer-social-media h3 {
-    font-size: 2rem;
-    color: var(--font-color-dark);
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-/* End of Footer */
-/* End of Container */
+/* End of Responsive */
