@@ -593,12 +593,12 @@ footer {
         color: var(--font-color-light);
     }
     
-    .agco-info::before {
-        content: 'May 2024 - Present';
+    .tdsynnex-info::before {
+        content: 'May 2025 - Present';
     }
 
-    .arion-info::before {
-        content: 'May 2022 - Present';
+    .agco-info::before {
+        content: 'May 2024 - May 2025';
     }
 
     .chilis-info::before {
