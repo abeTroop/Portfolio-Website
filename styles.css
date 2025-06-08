@@ -235,6 +235,7 @@ header {
 .description {
     font-size: 1.5rem;
     color: var(--font-color-light);
+    list-style-position: inside;
 }
 
 .technical-skills {

@@ -78,16 +78,46 @@
                 <h2 class="section-title">Experience</h2>
                 <div class="section-underline"></div>
                 <div class="timeline">
-                    <!-- AGCO -->
+                    <!-- TD SYNNEX -->
                     <div class="timeline-left job">
+                        <div class="tdsynnex-info timeline-content">
+                            <h4 class="item-title">AI Engineer Intern</h4>
+                            <h5 class="item-subtitle">TD SYNNEX</h5>
+                            <p class="description">
+                                Developing an AI project utilizing NVIDIA NIM (NVIDIA Inference Microservices)
+                            </p>
+                            <ul class="technical-skills">
+                                <li class="skill">Python</li>
+                                <li class="skill">NVIDIA NIM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-middle"></div>
+                    <h3 class="timeline-date timeline-date-right">May 2025 - Present</h3>
+                    <!-- End of TD SYNNEX -->
+                    
+                    <!-- AGCO -->
+                    <h3 class="timeline-date timeline-date-left">May 2024 - May 2025</h3>
+                    <div class="timeline-middle"></div>
+                    <div class="timeline-right job">
                         <div class="agco-info timeline-content">
                             <h4 class="item-title">Software Engineer Intern</h4>
                             <h5 class="item-subtitle">AGCO Corporation</h5>
-                            <p class="description">
-                                Collaborated with a team to implement AI algorithms aimed at increasing tractor productivity. 
-                                Improved the display of information in the infotainment center of Massey Ferguson tractors by 
-                                developing new user interfaces.
-                            </p>
+                            <ul class="description">
+                                <li>
+                                    Predicted barley yield with a dataset with 16,000+ datapoints related to tractor performance 
+                                    by coding a linear regression model in Python using PyTorch, NumPy, and Pandas
+                                </li>
+                                <li>
+                                    Developed QML interfaces in QtCreator on Linux, integrating C++ backend data to embedded hardware displays
+                                </li> 
+                                <li>
+                                    Prototyped autonomous tractor driving using JackalUGV, Ouster LiDAR, and Autoware (ROS 2)
+                                </li> 
+                                <li>
+                                    Leveraged Git/GitHub for version control and Polarion for project management
+                                </li> 
+                            </ul>
                             <ul class="technical-skills">
                                 <li class="skill">Python</li>
                                 <li class="skill">QML</li>
@@ -95,23 +125,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="timeline-middle"></div>
-                    <h3 class="timeline-date timeline-date-right">May 2024 - Present</h3>
                     <!-- End of AGCO -->
-                    
-                    <!-- Arion -->
-                    <h3 class="timeline-date timeline-date-left">May 2022 - Present</h3>
-                    <div class="timeline-middle"></div>
-                    <div class="timeline-right job">
-                        <div class="arion-info timeline-content">
-                            <h4 class="item-title">Care Provider</h4>
-                            <h5 class="item-subtitle">Arion Care</h5>
-                            <p class="description">
-                                Worked with a member to ensure they reached their habilitation goals and supplemented their therapy.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End of Arion -->
                     
                     <!-- Chili's -->
                     <div class="timeline-left job">
@@ -119,9 +133,7 @@
                             <h4 class="item-title">Food Runner</h4>
                             <h5 class="item-subtitle">Chili's</h5>
                             <p class="description">
-                                Developed skills in customer service and communication by ensuring customers have a comfortable 
-                                dining experience and communicating effectively with managers and coworkers. Trained multiple new 
-                                team members as an experienced Food Runner.
+                                Developed customer service and communication skills by communicating effectively and training new team members
                             </p>
                         </div>
                     </div>
@@ -137,6 +149,49 @@
                 <h2 class="section-title">Projects</h2>
                 <div class="section-underline"></div>
                 <div class="project-container">
+                    <!-- PulseAI -->
+                    <div class="pulseai project">
+                        <div class="project-content">
+                            <h4 class="item-title">PulseAI</h4>
+                            <h5 class="item-subtitle">Capstone Project</h5>
+                            <p class="description">
+                                Fine-tuned a Named Entity Recognition (NER) model using BERT to extract function parameters from natural language. 
+                                Containerized and built a benchmarking tool for NPUs with Python and Docker for lightweight edge deployment.
+                            </p>
+                            <ul class="technical-skills">
+                                <li class="skill">Python</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End of PulseAI -->
+
+                    <!-- Health Inspection Database -->
+                    <div class="health-inspection-database project">
+                        <img src="images/projects/HealthInspectionDatabase.png" alt="Health Inspection Database">
+                        <div class="project-content">
+                            <h4 class="item-title">Health Inspection Database</h4>
+                            <h5 class="item-subtitle">Class Project</h5>
+                            <p class="description">
+                                Built a relational database using PostgreSQL to store and manage 67,000+ health inspection datapoints from Kaggle. 
+                                Developed a web interface using Python Flask, HTML, and CSS to allow keyword search across inspections. Integrated 
+                                Google Maps API via JavaScript to visualize restaurant locations.
+                            </p>
+                            <ul class="technical-skills">
+                                <li class="skill">PostgreSQL</li>
+                                <li class="skill">Python</li>
+                                <li class="skill">JavaScript</li>
+                                <li class="skill">HTML</li>
+                                <li class="skill">CSS</li>
+                            </ul>
+                            <div class="flex-spacer"></div>
+                            <a href="https://github.com/abeTroop/Health-Inspection-Database" target="_blank" class="code-link">
+                                <p>Check out the code on GitHub</p>
+                                <i class='fas fa-arrow-right'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End of Health Inspection Database -->
+
                     <!-- Portfolio Website -->
                     <div class="portfolio-website project">
                         <img src="images/projects/PortfolioWebsite.png" alt="Portfolio Website">
@@ -168,9 +223,8 @@
                             <h4 class="item-title">Office Automation System</h4>
                             <h5 class="item-subtitle">Class Project</h5>
                             <p class="description">
-                                Collaborated in a team of five to develop a program using Java featuring a database and an intuitive 
-                                UI using JavaFX to improve the efficiency of a doctor's office. Utilized project management software
-                                JIRA to track the progress of the project and Git/GitHub for version control.
+                                Collaborated to develop a Java application with an intuitive JavaFX UI to streamline doctors office operations. 
+                                Managed tasks using JIRA and maintained version control with Git/GitHub.
                             </p>
                             <ul class="technical-skills">
                                 <li class="skill">Java</li>
@@ -191,9 +245,7 @@
                             <h4 class="item-title">Random Land Mass Generator</h4>
                             <h5 class="item-subtitle">Class Project</h5>
                             <p class="description">
-                                Developed a C++ program to procedurally generate and display land masses using ASCII characters, with 
-                                functionality for user-defined or random seed input. Leveraged advanced C++ techniques including file 
-                                I/O operations and data normalization to handle large datasets efficiently.
+                                Built a C++ program to procedurally generate land masses with ASCII characters using data normalization.
                             </p>
                             <ul class="technical-skills">
                                 <li class="skill">C++</li>
